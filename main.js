@@ -1,7 +1,9 @@
 var http = require('http');
+var express = require('express');
+var app = require('express')();
 
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Site loading...');
-  console.log("running on port 5000");
-}).listen(5000);
+
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/coinbase.html');
+});
+app.listen(3000);
