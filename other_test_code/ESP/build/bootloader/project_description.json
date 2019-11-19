@@ -1,0 +1,18 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "C:/Users/Vindh/Desktop/esp-idf/components/bootloader/subproject",
+    "build_dir":          "C:/Users/Vindh/Desktop/EC444/Team7-Schuweh-Kuchibhotla-Norell/quest-4/code/ESP/build/bootloader",
+    "config_file":        "C:/Users/Vindh/Desktop/EC444/Team7-Schuweh-Kuchibhotla-Norell/quest-4/code/ESP/sdkconfig",
+    "config_defaults":    "C:/Users/Vindh/Desktop/EC444/Team7-Schuweh-Kuchibhotla-Norell/quest-4/code/ESP/sdkconfig.defaults",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v3.2.2",
+    "phy_data_partition": "",
+    "monitor_baud" : "115200",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : " C:/Users/Vindh/Desktop/esp-idf/components/spi_flash/Kconfig C:/Users/Vindh/Desktop/esp-idf/components/esp32/Kconfig C:/Users/Vindh/Desktop/esp-idf/components/log/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : " C:/Users/Vindh/Desktop/esp-idf/components/esptool_py/Kconfig.projbuild C:/Users/Vindh/Desktop/esp-idf/components/partition_table/Kconfig.projbuild C:/Users/Vindh/Desktop/esp-idf/components/bootloader/Kconfig.projbuild"
+    },
+    "build_components" : [ "soc", "spi_flash", "micro-ecc", "bootloader_support", "main", "esptool_py", "partition_table", "esp32", "log", "bootloader" ],
+    "build_component_paths" : [ "C:/Users/Vindh/Desktop/esp-idf/components/soc", "C:/Users/Vindh/Desktop/esp-idf/components/spi_flash", "C:/Users/Vindh/Desktop/esp-idf/components/micro-ecc", "C:/Users/Vindh/Desktop/esp-idf/components/bootloader_support", "C:/Users/Vindh/Desktop/esp-idf/components/bootloader/subproject/main", "C:/Users/Vindh/Desktop/esp-idf/components/esptool_py", "C:/Users/Vindh/Desktop/esp-idf/components/partition_table", "C:/Users/Vindh/Desktop/esp-idf/components/esp32", "C:/Users/Vindh/Desktop/esp-idf/components/log", "C:/Users/Vindh/Desktop/esp-idf/components/bootloader" ]
+}

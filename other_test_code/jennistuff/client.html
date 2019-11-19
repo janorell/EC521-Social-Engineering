@@ -1,0 +1,110 @@
+<!-- client side -->
+<!doctype html>
+<html>
+	<!-- HTML HEAD -->
+	<head>
+		<title>Line Chart</title>
+
+		<script src="/socket.io/socket.io.js"></script>
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Style the header */
+    .header {
+      position: relative;
+      background-color: #f1f1f1;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: 300px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Style the footer */
+    .footer {
+      background-color: #f1f1f1;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+    </style>
+	</head>
+
+	<body>
+		<!-- <script>
+			function refreshPage(){
+				 window.location.reload();
+			}
+		</script> -->
+		<div class="header">
+  			<h2>Quest 4: Autonomous Crawler</h2>
+		</div>
+
+		<div class="row">
+			<div class="column" style="background-color:rgb(114, 172, 182);">
+				<button id="start" onclick="startCrawl()">Start</button>
+				<script src="/socket.io/socket.io.js"></script>
+				<script>
+					var socket = io();
+					function startCrawl(){
+					   socket.emit('start'); // event, message
+						 console.log("start clicked");
+						 // var estop = document.getElementById("stop");
+						 // var estart = document.getElementById("start");
+						 // estart.style.display == 'none';
+						 // estop.style.display = 'block';
+					}
+          socket.on('startupdate', function(data){
+					 document.getElementById("startbut").innerHTML = ' ';
+				});
+				</script>
+			</div>
+			<div class="column" style="background-color:rgb(143, 199, 211);">
+				<button onclick="stopCrawl()">Stop</button>
+				<script src="/socket.io/socket.io.js"></script>
+				<script>
+					var socket = io();
+					function stopCrawl() {
+					   socket.emit('stop');
+						 console.log("stop clicked");
+						 // var estop = document.getElementById("stop");
+						 // var estart = document.getElementById("start");
+						 // estart.style.display == 'block';
+						 // estop.style.display = 'none';
+					}
+          socket.on('stopupdate', function(data){
+					 document.getElementById("stopbut").innerHTML = ' ';
+				});
+				</script>
+			</div>
+
+		</div>
+
+	</body>
+</html>
+<!-- <META HTTP-EQUIV="refresh" CONTENT="2"> -->
